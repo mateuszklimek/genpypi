@@ -1,0 +1,2 @@
+[console_scripts]
+genpypi = genpypi.cli:main
