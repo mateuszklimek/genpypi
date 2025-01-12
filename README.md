@@ -10,15 +10,32 @@ You can install `genpypi` using pip:
 pip install genpypi
 ```
 
-## Commands
+## Usage
+
+Create a new Python package with all necessary files:
 
 ```bash
-genpypi create mu_package_name
+genpypi create my_package_name
 ```
 
-## Publish
+This will generate:
+- Basic package structure
+- setup.py
+- GitHub Actions workflow for PyPI publishing
+- .gitignore
+- README.md
 
-Uplaod to Github and run your github action to publish to PyPI. 
+## Publishing to PyPI
+
+1. Create a repository on GitHub
+2. Push your code to GitHub
+3. Add your PyPI credentials as GitHub secrets:
+   - `PYPI_PASSWORD`
+4. The GitHub Action will automatically publish your package when you push to main
+
+## License
+
+MIT
 
 
 

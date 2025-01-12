@@ -24,7 +24,7 @@ def create_project_structure(project_name: str):
     
     # Root level files
     files_to_copy = {
-        "pyproject.toml": "pyproject.toml",
+        "setup.py.": "setup.py",
         "README.md": "README.md",
         "LICENSE": "LICENSE",
         "gitignore": ".gitignore"
@@ -41,7 +41,7 @@ def create_project_structure(project_name: str):
     workflow_dir = project_dir / ".github" / "workflows"
     os.makedirs(workflow_dir, exist_ok=True)
     
-    with open(TEMPLATE_DIR / "github_workflow.yml", "r") as f:
+    with open(TEMPLATE_DIR / "publish.yml", "r") as f:
         workflow_content = f.read().replace("{{project_name}}", project_name)
     
     with open(workflow_dir / "publish.yml", "w") as f:
