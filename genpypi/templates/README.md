@@ -1,4 +1,4 @@
-# {{project_name}}
+# {{ package_name }}
 
 Description of your project goes here.
 
